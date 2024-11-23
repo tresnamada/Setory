@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glow {
+    text-shadow: 0 0 10px #f3b664,
+                 0 0 20px #f3b664,
+                 0 0 30px #f3b664,
+                 0 0 40px #f3b664;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #f3b664,
+                     0 0 20px #f3b664,
+                     0 0 30px #f3b664;
+    }
+    to {
+        text-shadow: 0 0 20px #f3b664,
+                     0 0 30px #f3b664,
+                     0 0 40px #f3b664,
+                     0 0 50px #f3b664;
+    }
+}
+.group {
+    transform-origin: left center;
+ }
+ 
+ .group.active {
+    width: 350px !important;
+    border-radius: 0.75rem;
+ }
+ 
+ /* Add smooth transitions */
+ .group, .group * {
+    transition: all 500ms ease-in-out;
+ }
