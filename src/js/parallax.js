@@ -27,3 +27,10 @@ function toggleCard(element) {
         element.style.width = '350px';
     }
  }
+
+ document.addEventListener('DOMContentLoaded', function() {
+            const scrollContainer = document.querySelector('.scroll-content');
+            const originalContent = scrollContainer.innerHTML;
+            // Duplicate content for seamless loop
+            scrollContainer.innerHTML = originalContent + originalContent;
+        });
