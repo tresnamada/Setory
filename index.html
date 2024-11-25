@@ -21,11 +21,11 @@
             
             <!-- Navbar Links -->
             <div class="flex items-center gap-8">
-                <a href="#" class="text-white text-sm font-semibold font-sans leading-[21px] px-4 py-2">Home</a>
-                <a href="#" class="text-white text-sm font-semibold font-sans leading-[21px] px-4 py-2">Tour</a>
-                <a href="#" class="text-white text-sm font-semibold font-sans leading-[21px] px-4 py-2">Kuliner</a>
-                <a href="#" class="text-white text-sm font-semibold font-sans leading-[21px] px-4 py-2">Event</a>
-                <a href="#" class="text-white text-sm font-semibold font-sans leading-[21px] px-4 py-2">Komunitas</a>
+                <a href="#" class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2">Home</a>
+                <a href="#" class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2">Tour</a>
+                <a href="#" class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2">Kuliner</a>
+                <a href="#" class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2">Event</a>
+                <a href="#" class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2">Komunitas</a>
 
                 <!-- Login Button -->
                 <a href="#" class="ml-8 px-4 py-2 bg-[#ffd3ac]/10 rounded-[10px] text-white text-xs font-semibold font-['Plus Jakarta Sans'] leading-[18px]">
@@ -39,6 +39,8 @@
 
         <!-- Hero Section -->
         <div class="mx-auto px-4">
+            <div class="dots-overlay"></div>
+
             <!-- Hero Title -->
             <div class="container mt-6 mx-auto text-center">
                 <h1 class="text-center text-[150px] font-semibold font-garamond text-secondary leading-[150px] glow">
@@ -178,18 +180,79 @@
         </div>
 
         <!-- Carousel Section -->
-        <div class="mt-24 mb-96">
-            <h1 class="text-secondary mb-12 text-[150px] text-center font-garamond font-bold glow my-16">Cari Kuliner</h1>
-            <div class="relative overflow-x-auto mx-auto container my-24">
-                <div class="flex justify-center items-center gap-8 w-max scroll-content">
-                    <img src="src/img/makanan1.jpg" alt="Kuliner 1" class="h-[422px] w-[242px] object-cover rounded-lg hover:scale-105 transition-transform">
-                    <img src="src/img/makanan2.jpg" alt="Kuliner 2" class="h-[422px] w-[242px] object-cover rounded-lg hover:scale-105 transition-transform">
-                    <img src="src/img/makanan3.jpg" alt="Kuliner 3" class="h-[422px] w-[242px] object-cover rounded-lg hover:scale-105 transition-transform">
-                    <img src="src/img/makanan4.jpg" alt="Kuliner 4" class="h-[422px] w-[242px] object-cover rounded-lg hover:scale-105 transition-transform">
-                    <img src="src/img/makanan5.jpg" alt="Kuliner 5" class="h-[422px] w-[242px] object-cover rounded-lg hover:scale-105 transition-transform">
+        <div class="mt-24">
+            <h1 class="text-secondary mb-12 text-[150px] text-center font-garamond font-bold glow">Cari Kuliner</h1>
+            <div class="relative overflow-x-auto overflow-y-hidden mx-auto container h-[422px]">
+                <div class="flex items-center justify-start gap-4 w-full">
+                    <div class="group relative h-[422px] w-[242px] transition-all duration-200 hover:w-[400px]">
+                        <img src="src/img/makanan1.jpg" alt="Kuliner 1" class="h-full w-full object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-secondary glow text-2xl font-bold mb-2">Sate</h3>
+                            <p class="text-white text-sm pb-2">Hidangan daging sapi yang dimasak dengan rempah-rempah khas Minangkabau</p>
+                            <a href="" class="px-2 py-2 bg-primary mt-4 text-secondary glow rounded-lg hover:opacity-55">Cari Tahu</a>
+                        </div>
+                    </div>
+                    <div class="group relative h-[422px] w-[242px] transition-all duration-300 hover:w-[400px]">
+                        <img src="src/img/makanan2.jpg" alt="Kuliner 2" class="h-full w-full object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-secondary glow text-2xl font-bold mb-2">Lumpia</h3>
+                            <p class="text-white text-sm pb-2">Potongan ayam yang ditusuk dan dipanggang dengan bumbu kacang khas</p>
+                            <a href="" class="px-2 py-2 bg-primary text-secondary glow rounded-lg hover:opacity-55">Cari Tahu</a>
+                        </div>
+                    </div>
+                    <div class="group relative h-[422px] w-[242px] transition-all duration-300 hover:w-[400px]">
+                        <img src="src/img/makanan3.jpg" alt="Kuliner 3" class="h-full w-full object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-secondary glow text-2xl font-bold mb-2">Gado Gado</h3>
+                            <p class="text-white text-sm pb-2">Nasi yang digoreng dengan bumbu rempah dan sayuran pilihan</p>
+                            <a href="" class="px-2 py-2 bg-primary mt-4 text-secondary glow rounded-lg hover:opacity-55">Cari Tahu</a>
+                        </div>
+                    </div>
+                    <div class="group relative h-[422px] w-[242px] transition-all duration-300 hover:w-[400px]">
+                        <img src="src/img/makanan4.jpg" alt="Kuliner 4" class="h-full w-full object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-secondary glow text-2xl font-bold mb-2">Niga Ambon</h3>
+                            <p class="text-white text-sm pb-2">Sayuran segar dengan bumbu kacang khas Indonesia</p>
+                            <a href="" class="px-2 py-2 bg-primary mt-4 text-secondary glow rounded-lg hover:opacity-55">Cari Tahu</a>
+                        </div>
+                    </div>
+                    <div class="group relative h-[422px] w-[242px] transition-all duration-300 hover:w-[400px]">
+                        <img src="src/img/makanan5.jpg" alt="Kuliner 5" class="h-full w-full object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-secondary glow text-2xl font-bold mb-2">Wajik Bandung wel</h3>
+                            <p class="text-white text-sm pb-2">Sup ayam tradisional dengan kuah kuning dan rempah pilihan</p>
+                            <a href="" class="px-2 py-2 bg-primary mt-4 text-secondary glow rounded-lg hover:opacity-55">Cari Tahu</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <h1 class="text-white text-center pt-10 text-lg font-semibold font-sans leading-7">Klik Disini Untuk Jelajah Lebih Banyak</h1>
         </div>
+        
+            <!-- Konten Event Section -->
+    <div class="relative mt-16 mb-96 z-10 container mx-auto">
+        <!-- Judul Event -->
+        <h1 class="text-[150px] text-center font-semibold font-garamond text-secondary mb-4 glow">Event</h1>
+        <p class="text-3xl text-white font-medium font-garamond max-w-2xl text-center mx-auto">
+            Temukan beragam acara menarik yang kami tawarkan. Dari seminar hingga bazar lokal, jadikan momen spesialmu lebih bermakna bersama kami
+        </p>
+        <!-- Gambar -->
+        <div>
+            <img class="w-[140px] h-[140px] left-0 absolute rounded-[18px] glow" src="src/img/asset1.png" />
+            <img class="w-[110px] h-[110px] right-52 top-20 absolute rounded-[18px] drop-shadow-xl " src="src/img/asset2.png" />
+            <img class="w-[140px] h-[140px] top-52 right-8 absolute rounded-[18px]" src="src/img/asset3.png" />
+        </div>
+          
+        <!-- Gambar Event -->
+        <div class="relative mt-10 overflow-x-auto">
+            <div class="flex gap-6 mx-auto container mt-8 w-1/2">
+                <!-- Gambar Utama di Tengah -->
+                <img src="src/img/event1.png" alt="Main Event" class="w-[600px] h-[319px] rounded-3xl shadow">
+                <img src="src/img/event2.png" alt="Main Event" class="w-[700px] h-[319px] rounded-3xl shadow">
+                <img src="src/img/event3.png" alt="Main Event" class="w-[700px] h-[319px] rounded-3xl shadow">
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="src/js/parallax.js"></script>
