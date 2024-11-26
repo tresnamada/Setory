@@ -24,8 +24,9 @@
     }
 }
 .group {
-    transform-origin: left center;
- }
+    transition: transform 0.3s ease;
+}
+
  
  .group.active {
     width: 350px !important;

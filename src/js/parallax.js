@@ -15,18 +15,19 @@ document.addEventListener("scroll", function() {
 });
 
 function toggleCard(element) {
-    // Remove active class from all cards
+    // Hapus kelas aktif dan atur ulang transformasi pada semua card
     document.querySelectorAll('.group').forEach(card => {
         card.classList.remove('active');
-        card.style.width = '100px';
+        card.style.transform = 'scale(1)';
     });
     
-    // Toggle active class on clicked card
+    // Toggle kelas aktif dan transformasi pada card yang diklik
     if (!element.classList.contains('active')) {
         element.classList.add('active');
-        element.style.width = '350px';
+        element.style.transform = 'scale(1.2)'; // Perbesar sedikit
     }
- }
+}
+
 
  document.addEventListener('DOMContentLoaded', function() {
             const scrollContainer = document.querySelector('.scroll-content');
