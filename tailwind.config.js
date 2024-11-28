@@ -1,6 +1,11 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./public/index.html', './src/**/*.{html,js}'], // Pastikan ini mengarah ke file yang benar
+  content: [
+    './index.html',
+    'bangunan.html',
+    'makanan.html',
+    'loginpage.html',
+    './src/**/*.html',  // atau direktori HTML lainnya
+  ],
   theme: {
     extend: {
       colors: {
@@ -11,7 +16,6 @@ module.exports = {
         sans: ["Plus Jakarta Sans", "sans-serif"],
         garamond: ["EB Garamond", "serif"],
       },
-    
     },
   },
   plugins: [],
