@@ -4,6 +4,9 @@ module.exports = {
     'bangunan.html',
     'makanan.html',
     'loginpage.html',
+    'quiz.html',
+    'video.html',
+    'makanan.html',
     './src/**/*.html',  // atau direktori HTML lainnya
   ],
   theme: {

@@ -657,6 +657,10 @@ video {
   top: 13rem;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .-z-20 {
   z-index: -20;
 }
@@ -671,6 +675,10 @@ video {
 
 .z-10 {
   z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .z-50 {
@@ -690,6 +698,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -706,12 +718,20 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.ml-14 {
+  margin-left: 3.5rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-16 {
@@ -758,6 +778,10 @@ video {
   height: 5rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .h-40 {
   height: 10rem;
 }
@@ -774,6 +798,18 @@ video {
   height: 319px;
 }
 
+.h-\[338px\] {
+  height: 338px;
+}
+
+.h-\[350px\] {
+  height: 350px;
+}
+
+.h-\[392px\] {
+  height: 392px;
+}
+
 .h-\[400px\] {
   height: 400px;
 }
@@ -788,6 +824,10 @@ video {
 
 .h-\[500px\] {
   height: 500px;
+}
+
+.h-\[528px\] {
+  height: 528px;
 }
 
 .h-\[600px\] {
@@ -814,12 +854,12 @@ video {
   height: 100vh;
 }
 
-.h-24 {
-  height: 6rem;
+.h-4 {
+  height: 1rem;
 }
 
-.h-32 {
-  height: 8rem;
+.h-12 {
+  height: 3rem;
 }
 
 .min-h-screen {
@@ -842,8 +882,16 @@ video {
   width: 20rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[1034px\] {
+  width: 1034px;
 }
 
 .w-\[200\%\] {
@@ -858,8 +906,20 @@ video {
   width: 242px;
 }
 
+.w-\[377px\] {
+  width: 377px;
+}
+
 .w-\[400px\] {
   width: 400px;
+}
+
+.w-\[420px\] {
+  width: 420px;
+}
+
+.w-\[507px\] {
+  width: 507px;
 }
 
 .w-\[520px\] {
@@ -872,6 +932,10 @@ video {
 
 .w-\[602px\] {
   width: 602px;
+}
+
+.w-\[644px\] {
+  width: 644px;
 }
 
 .w-\[700px\] {
@@ -915,6 +979,10 @@ video {
   cursor: pointer;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -929,6 +997,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -951,8 +1023,18 @@ video {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -999,6 +1081,10 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .border-t-2 {
@@ -1062,8 +1148,18 @@ video {
   --tw-bg-opacity: 0.7;
 }
 
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.from-\[\#312414\] {
+  --tw-gradient-from: #312414 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(49 36 20 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-black {
@@ -1076,6 +1172,10 @@ video {
   --tw-gradient-from: rgb(0 0 0 / 0.8) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-\[\#f3b664\] {
+  --tw-gradient-to: #f3b664 var(--tw-gradient-to-position);
 }
 
 .to-transparent {
@@ -1149,8 +1249,20 @@ video {
   padding-top: 2.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-start {
+  text-align: start;
 }
 
 .font-garamond {
@@ -1195,6 +1307,10 @@ video {
   font-size: 150px;
 }
 
+.text-\[40px\] {
+  font-size: 40px;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1217,6 +1333,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .font-medium {
@@ -1261,6 +1381,15 @@ video {
 
 .leading-\[45px\] {
   line-height: 45px;
+}
+
+.leading-\[60px\] {
+  line-height: 60px;
+}
+
+.text-\[\#94410c\] {
+  --tw-text-opacity: 1;
+  color: rgb(148 65 12 / var(--tw-text-opacity, 1));
 }
 
 .text-black {
