@@ -110,3 +110,17 @@ sectionIconElements.forEach(icon => {
     });
 });
 ;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.subtema-title');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Cari elemen content terdekat
+      const content = button.nextElementSibling;
+      
+      // Toggle kelas 'hidden'
+      content.classList.toggle('hidden');
+    });
+  });
+});
