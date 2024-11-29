@@ -135,52 +135,81 @@
           </iframe>
           <div class="container mx-auto px-4 py-8">
             <!-- Heading -->
-            <h1 class="text-2xl text-secondary font-bold mb-6 text-center">Tambah Ulasan dan Rating</h1>
+            <h1 class="text-2xl text-secondary font-bold mb-6 text-center">
+              Tambah Ulasan dan Rating
+            </h1>
             <!-- Form Ulasan -->
             <div class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto">
-                <form id="reviewForm" class="space-y-4">
-                    <!-- Nama -->
-                    <div>
-                        <label for="name" class="block font-semibold text-gray-700">Nama:</label>
-                        <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200" placeholder="Masukkan nama Anda" required>
-                    </div>
-    
-                    <!-- Ulasan -->
-                    <div>
-                        <label for="review" class="block font-semibold text-gray-700">Ulasan:</label>
-                        <textarea id="review" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200" placeholder="Tulis ulasan Anda" rows="4" required></textarea>
-                    </div>
-    
-                    <!-- Rating -->
-                    <div>
-                        <label for="rating" class="block font-semibold text-gray-700">Rating:</label>
-                        <select id="rating" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200" required>
-                            <option value="" disabled selected>Pilih rating</option>
-                            <option value="1">1 - Sangat Buruk</option>
-                            <option value="2">2 - Buruk</option>
-                            <option value="3">3 - Cukup</option>
-                            <option value="4">4 - Baik</option>
-                            <option value="5">5 - Sangat Baik</option>
-                        </select>
-                    </div>
-    
-                    <!-- Submit Button -->
-                    <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-opacity-85 transition duration-300">Tambahkan Ulasan</button>
-                </form>
+              <form id="reviewForm" class="space-y-4">
+                <!-- Nama -->
+                <div>
+                  <label for="name" class="block font-semibold text-gray-700"
+                    >Nama:</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Masukkan nama Anda"
+                    required
+                  />
+                </div>
+
+                <!-- Ulasan -->
+                <div>
+                  <label for="review" class="block font-semibold text-gray-700"
+                    >Ulasan:</label
+                  >
+                  <textarea
+                    id="review"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+                    placeholder="Tulis ulasan Anda"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Rating -->
+                <div>
+                  <label for="rating" class="block font-semibold text-gray-700"
+                    >Rating:</label
+                  >
+                  <select
+                    id="rating"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih rating</option>
+                    <option value="1">1 - Sangat Buruk</option>
+                    <option value="2">2 - Buruk</option>
+                    <option value="3">3 - Cukup</option>
+                    <option value="4">4 - Baik</option>
+                    <option value="5">5 - Sangat Baik</option>
+                  </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-opacity-85 transition duration-300"
+                >
+                  Tambahkan Ulasan
+                </button>
+              </form>
             </div>
-    
+
             <!-- Daftar Ulasan -->
             <div class="mt-8">
-                <h2 class="text-xl text-secondary font-semibold mb-4">Daftar Ulasan</h2>
-                <div id="reviewList" class="space-y-4">
-                    <!-- Ulasan akan ditambahkan di sini -->
-                </div>
+              <h2 class="text-xl text-secondary font-semibold mb-4">
+                Daftar Ulasan
+              </h2>
+              <div id="reviewList" class="space-y-4">
+                <!-- Ulasan akan ditambahkan di sini -->
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-        
       </div>
-      
     </div>
     <script src="src/js/quiz.js"></script>
   </body>
