@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOS Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div data-aos="fade-up">
+    <h1>Judul yang Fade In</h1>
+    <p>Ini adalah konten yang muncul dengan animasi fade-up saat di-scroll.</p>
+  </div>
+
+  <div data-aos="zoom-in" data-aos-duration="1500">
+    <h1>Judul yang Zoom In</h1>
+    <p>Ini adalah konten yang muncul dengan animasi zoom-in saat di-scroll.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,  // Durasi animasi dalam milidetik
+      easing: 'ease-in-out',  // Jenis easing
+      once: true  // Animasi hanya terjadi sekali
+    });
+  </script>
+</body>
+</html>

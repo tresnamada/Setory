@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Makanan</title>
     <link rel="stylesheet" href="src/output.css" />
+    <style>
+      /* Hover effect untuk card */
+      .card:hover {
+        transform: translateY(-10px);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
-  <body class="bg-gradient-to-r from-[#312414] to-[#f3b664]">
+  <body class="bg-primary">
     <nav
       class="w-full h-20 mx-auto relative flex items-center justify-between px-8"
     >
@@ -60,256 +69,141 @@
       ></div>
     </nav>
 
-    <!-- Gado Gado Kiri -->
-    <div
-      class="container mx-auto flex flex-wrap md:flex-nowrap items-center gap-4"
-    >
-      <div class="w-full md:w-1/2">
-        <img
-          src="src/img/Gado gado.png"
-          alt="Makanan"
-          class="w-[377px] h-[392px]"
-        />
-      </div>
-      <div class="w-full md:w-1/2 text-left md:text-right">
-        <h1
-          class="text-right text-white text-[40px] font-bold font-sans leading-[60px]"
-        >
-          Gado Gado<br />Jakarta
-        </h1>
-        <div class="w-[644px] text-right">
-          <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Gado-gado berasal dari kebiasaan masyarakat Betawi yang menyukai sayuran segar dengan bumbu kacang. Hidangan ini mendapat pengaruh dari budaya Tionghoa yang memperkenalkan saus kacang. <br/></h1>
-          <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
+     <!-- Hero Section -->
+  <div class="py-20 mb-12 text-center">
+    <h1 class="text-5xl font-extrabold text-[#f3b664] mb-4">Makanan Khas Nusantara</h1>
+    <p class="text-lg text-gray-200">Jelajahi kekayaan rasa dari berbagai daerah di Indonesia</p>
+  </div>
+
+  <!-- Grid Cards -->
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-right">
+        <div class="flex justify-center items-center">
+          <img src="src/img/Gado gado.png" alt="Gado Gado Jakarta" class="w-80 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Gado Gado Jakarta</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Gado-gado berasal dari kebiasaan masyarakat Betawi yang menyukai sayuran segar dengan bumbu kacang.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
         </div>
       </div>
-    </div>
-    <!-- Garis di bawah -->
-    <div
-      class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
-    ></div>
-
-        <!-- Lumpia Kanan-->
-    <div
-    class="container mx-auto flex flex-wrap md:flex-nowrap flex-row-reverse items-center mt-10"
-  >
-  <div class="w-full md:w-1/2 flex justify-end items-center">
-    <img
-      src="src/img/Lumpia.png"
-      alt="Makanan"
-      class="w-[377px] h-[392px]"
-    />
-  </div>
-    <div class="w-full md:w-1/2 text-left">
-        <h1
-        class="text-start text-white text-[40px] font-bold font-sans leading-[60px]"
-      >
-        Lumpia<br /> Semarang
-      </h1>
-      <div class="w-[644px] text-">
-        <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Gado-gado berasal dari kebiasaan masyarakat Lumpia Semarang lahir dari perpaduan budaya Tionghoa dan Jawa pada abad ke-19. Awalnya berisi rebung dengan bumbu khas Jawa, lumpia menjadi camilan ikonik kota Semarang <br/></h1>
-        <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
+      <!-- Card 2 -->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-right">
+        <div class="flex justify-center items-center">
+          <img src="src/img/Lumpia.png" alt="Lumpia Semarang" class="w-60 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Lumpia Semarang</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Lumpia Semarang lahir dari perpaduan budaya Tionghoa dan Jawa pada abad ke-19.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
       </div>
-    </div>
-  </div>
-      <!-- Garis di bawah -->
-      <div
-      class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
-    ></div>
-
-     <!-- Bika Ambon Kiri -->
-     <div
-     class="container mx-auto flex flex-wrap md:flex-nowrap items-center gap-4 mt-10"
-   >
-     <div class="w-full md:w-1/2">
-       <img
-         src="src/img/Gado gado.png"
-         alt="Makanan"
-         class="w-[377px] h-[392px]"
-       />
-     </div>
-     <div class="w-full md:w-1/2 text-left md:text-right">
-       <h1
-         class="text-right text-white text-[40px] font-bold font-sans leading-[60px]"
-       >
-         Bika Ambon<br />Medan
-       </h1>
-       <div class="w-[644px] text-right">
-         <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Bika Ambon adalah kue khas Medan dengan tekstur berongga dan rasa manis lembut. Meski namanya 'Ambon,' kue ini berasal dari Medan, terinspirasi dari kue Melayu 'Bingka.'  <br/></h1>
-         <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-       </div>
-     </div>
-   </div>
-   <!-- Garis di bawah -->
-   <div
-   class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
- ></div>
-
-     <!-- Pempek Kanan-->
-     <div
-     class="container mx-auto flex flex-wrap md:flex-nowrap flex-row-reverse items-center mt-10"
-   >
-   <div class="w-full md:w-1/2 flex justify-end items-center">
-     <img
-       src="src/img/pempek.png"
-       alt="Makanan"
-       class="w-[507px] h-[338px]"
-     />
-   </div>
-     <div class="w-full md:w-1/2 text-left">
-         <h1
-         class="text-start text-white text-[40px] font-bold font-sans leading-[60px]"
-       >
-       Pempek<br /> Palembang
-       </h1>
-       <div class="w-[644px] text-">
-         <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">"Pempek Palembang sudah ada sejak masa Kesultanan Palembang di abad ke-16. Makanan ini awalnya dibuat dari ikan dan sagu untuk memanfaatkan hasil Sungai Musi. <br/></h1>
-         <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-       </div>
-     </div>
-   </div>
-       <!-- Garis di bawah -->
-       <div
-       class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
-     ></div>
-
-     <!-- Sop Kiri -->
-     <div
-     class="container mx-auto flex flex-wrap md:flex-nowrap items-center gap-4 mt-10"
-   >
-     <div class="w-full md:w-1/2">
-       <img
-         src="src/img/sopmutiara.png"
-         alt="Makanan"
-         class="w-[377px] h-[392px]"
-       />
-     </div>
-     <div class="w-full md:w-1/2 text-left md:text-right">
-       <h1
-         class="text-right text-white text-[40px] font-bold font-sans leading-[60px]"
-       >
-         Sop Mutiara<br />Banjarmasin
-       </h1>
-       <div class="w-[644px] text-right">
-         <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Sate Lilit berasal dari Bali, khususnya Denpasar, dan awalnya dibuat sebagai bagian dari upacara adat. Sate ini menggunakan daging cincang, seperti ikan, ayam, atau babi, yang dililitkan pada batang serai. <br/></h1>
-         <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-       </div>
-     </div>
-   </div>
-   <!-- Garis di bawah -->
-   <div
-   class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
- ></div>
- 
- <!-- Sate Kanan-->
- <div
- class="container mx-auto flex flex-wrap md:flex-nowrap flex-row-reverse items-center mt-10"
->
-<div class="w-full md:w-1/2 flex justify-end items-center">
- <img
-   src="src/img/Sate Lilit Bali 2.png"
-   alt="Makanan"
-   class="w-[507px] h-[338px]"
- />
-</div>
- <div class="w-full md:w-1/2 text-left">
-     <h1
-     class="text-start text-white text-[40px] font-bold font-sans leading-[60px]"
-   >
-   Sate Lilit<br /> Denpasar
-   </h1>
-   <div class="w-[644px] text-">
-     <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Sop Mutiara adalah makanan khas Banjarmasin yang terinspirasi dari kuliner Belanda. Hidangan ini dibuat dari bakso ayam kecil berbentuk bulat, menyerupai mutiara. Awalnya, sop ini dikembangkan oleh masyarakat Banjar sebagai adaptasi dari sup krim ala Eropa. <br/></h1>
-     <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-   </div>
- </div>
-</div>
-   <!-- Garis di bawah -->
-   <div
-   class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
- ></div>
-
-  <!-- Sop Kiri -->
-  <div
-  class="container mx-auto flex flex-wrap md:flex-nowrap items-center gap-4 mt-10"
->
-  <div class="w-full md:w-1/2">
-    <img
-      src="src/img/Tinutuan Manado.png"
-      alt="Makanan"
-      class="w-[377px] h-[392px]"
-    />
-  </div>
-  <div class="w-full md:w-1/2 text-left md:text-right">
-    <h1
-      class="text-right text-white text-[40px] font-bold font-sans leading-[60px]"
-    >
-      Tinituan<br />Manado
-    </h1>
-    <div class="w-[644px] text-right">
-      <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Tinutuan, atau bubur Manado, berasal dari Sulawesi Utara dan dikenal sejak zaman kolonial. Awalnya dibuat sebagai makanan sehat dari campuran sayuran, labu, dan jagung tanpa daging. <br/></h1>
-      <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-    </div>
-  </div>
-</div>
-<!-- Garis di bawah -->
-<div
-class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
-></div>
-
-<!-- coto kanan -->
-<div
-class="container mx-auto flex flex-wrap md:flex-nowrap flex-row-reverse items-center mt-10"
->
-<div class="w-full md:w-1/2 flex justify-end items-center">
-<img
-  src="src/img/cotomakasar.png"
-  alt="Makanan"
-  class="w-[507px] h-[338px]"
-/>
-</div>
-<div class="w-full md:w-1/2 text-left">
-    <h1
-    class="text-start text-white text-[40px] font-bold font-sans leading-[60px]"
-  >
-  Coto<br /> Makassar
-  </h1>
-  <div class="w-[644px] text-">
-    <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Coto Makassar adalah makanan khas Sulawesi Selatan yang sudah ada sejak masa Kerajaan Gowa. Nama 'coto' berasal dari bahasa setempat, yang berarti 'campuran,' merujuk pada berbagai bahan dalam kuahnya. <br/></h1>
-    <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-  </div>
-</div>
-</div>
-  <!-- Garis di bawah -->
-  <div
-  class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
-></div>
-
-      <!-- Sop Kiri -->
-  <div
-  class="container mx-auto flex flex-wrap md:flex-nowrap items-center gap-4 mt-10"
->
-  <div class="w-full md:w-1/2">
-    <img
-      src="src/img/gudeg.png"
-      alt="Makanan"
-      class="w-[420px] h-[392px]"
-    />
-  </div>
-  <div class="w-full md:w-1/2 text-left md:text-right">
-    <h1
-      class="text-right text-white text-[40px] font-bold font-sans leading-[60px]"
-    >
-      Gudeg<br />Yogyakarta
-    </h1>
-    <div class="w-[644px] text-right">
-      <h1 class="text-white text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Gudeg adalah makanan khas Yogyakarta yang sudah ada sejak era Mataram Islam abad ke-16. Awalnya, gudeg dibuat oleh masyarakat yang memanfaatkan melimpahnya nangka muda. Masakan ini dimasak lama dengan santan dan bumbu khas, menghasilkan rasa manis yang unik. <br/></h1>
-      <a class="text-[#94410c] text-2xl font-bold font-['Plus Jakarta Sans'] leading-9">Baca selengkapnya</a>
-    </div>
-  </div>
-</div>
-<!-- Garis di bawah -->
-<div
-class="absolute mt-8 left-0 right-0 mx-auto w-full border-t border-white"
-></div>
+      <!-- Card 3 -->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-right">
+        <div class="flex justify-center items-center">
+          <img src="src/img/bikaambon.png" alt="Lumpia Semarang" class="w--56 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Bika Ambon Medan</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Bika Ambon adalah kue khas Medan dengan tekstur berongga dan rasa manis lembut. Meski namanya 'Ambon,' kue ini berasal dari Medan.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-left">
+        <div class="flex justify-center items-center">
+          <img src="src/img/pempek.png" alt="Lumpia Semarang" class="w-82 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Pempek 
+            Palembang</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Pempek Palembang sudah ada sejak masa Kesultanan Palembang di abad ke-16.Pempek dibuat oleh orang asli Palembang yang kemudian dititipkan ke orang Tionghoa untuk dijual.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-left">
+        <div class="flex justify-center items-center">
+          <img src="src/img/sopmutiara.png" alt="Lumpia Semarang" class="w-56 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Mutiara
+            Banjarmasin</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Sop Mutiara adalah makanan khas Banjarmasin yang terinspirasi dari kuliner Belanda. sop ini dikembangkan oleh masyarakat Banjar sebagai adaptasi dari sup krim ala Eropa.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <!-- Card 6-->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-left">
+        <div class="flex justify-center items-center">
+          <img src="src/img/Sate Lilit Bali 2.png" alt="Lumpia Semarang" class="w-56 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Sate Lilit Bali</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Sate Lilit berasal dari Bali, khususnya Denpasar, dan awalnya dibuat sebagai bagian dari upacara adat. Sate ini menggunakan daging cincang, seperti ikan, ayam, atau babi, yang dililitkan pada batang serai.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <!-- Card 7-->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-up">
+        <div class="flex justify-center items-center">
+          <img src="src/img/Tinutuan Manado.png" alt="Lumpia Semarang" class="w-80 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3">Tinituan
+            Manado</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Tinutuan, atau bubur Manado, berasal dari Sulawesi Utara dan dikenal sejak zaman kolonial. Awalnya dibuat sebagai makanan sehat dari campuran sayuran, labu, dan jagung tanpa daging
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <!-- Card 8-->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-up">
+        <div class="flex justify-center items-center">
+          <img src="src/img/cotomakasar.png" alt="Lumpia Semarang" class="w-80 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3 justify-end items-end">Coto Makkasar</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Coto Makassar adalah makanan khas Sulawesi Selatan yang sudah ada sejak masa Kerajaan Gowa. Nama 'coto' berasal dari bahasa setempat, yang berarti 'campuran,' merujuk pada berbagai bahan dalam kuahnya.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <!-- Card 9-->
+      <div class="card bg-[#312414] border border-[#f3b664] rounded-xl shadow-xl overflow-hidden transform transition-all" data-aos="fade-up">
+        <div class="flex justify-center items-center">
+          <img src="src/img/gudeg.png" alt="Lumpia Semarang" class="w-80 h-56 object-cover" />
+        </div>
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-[#f3b664] mb-3 ">Gudeg Jogja</h2>
+          <p class="text-gray-300 text-sm mb-4">
+            Gudeg adalah makanan khas Yogyakarta yang sudah ada sejak era Mataram Islam abad ke-16. Awalnya, gudeg dibuat oleh masyarakat yang memanfaatkan melimpahnya nangka muda. Masakan ini dimasak lama dengan santan dan bumbu khas, menghasilkan rasa manis yang unik.
+          </p>
+          <a href="#" class="text-[#f3b664] font-semibold hover:opacity-90 transition-colors">Baca selengkapnya</a>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1000,  // Durasi animasi dalam milidetik
+          easing: 'ease-in-out',  // Jenis easing 
+        });
+      </script>
   </body>
 </html>

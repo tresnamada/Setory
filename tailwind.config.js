@@ -7,6 +7,7 @@ module.exports = {
     'quiz.html',
     'video.html',
     'makanan.html',
+    'komunitas.html',
     './src/**/*.html',  // atau direktori HTML lainnya
   ],
   theme: {
