@@ -1,400 +1,719 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuliner Bangunan</title>
-    <link rel="stylesheet" href="src/output.css">
-</head>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
 
-<body class="bg-primary font-sans">
- 
-        <nav
-        class="w-full h-20 mx-auto relative flex items-center justify-between px-8"
-      >
-        <!-- Logo -->
-        <div
-          class="text-white text-lg font-bold font-['Plus Jakarta Sans'] leading-[27px]"
+  <body class="bg-primary font-sans">
+    <nav
+    class="w-full h-20 mx-auto relative flex items-center justify-between px-8 bg-primary"
+  >
+    <!-- Logo -->
+    <div class="text-white text-lg font-bold font-['Plus Jakarta Sans'] leading-[27px]">
+      LOGO
+    </div>
+  
+    <!-- Hamburger Menu -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex items-center justify-center w-10 h-10 text-white focus:outline-none"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  
+    <!-- Navbar Links -->
+    <div
+      id="menu"
+      class="hidden md:flex flex-col md:flex-row items-end gap-8 bg-primary md:bg-transparent w-full md:w-auto absolute md:static top-20 left-0 z-20 md:z-auto transition-all duration-300 ease-in-out"
+    >
+      <div class="flex flex-col md:flex-row items-end md:items-center gap-4 md:gap-8 w-full md:w-auto px-8 md:px-0 py-4 md:py-0 bg-primary md:bg-transparent">
+        <a
+          href="#"
+          class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2 w-full md:w-auto text-center md:text-left"
+          >Home</a
         >
-          LOGO
-        </div>
-    
-        <!-- Navbar Links -->
-        <div class="flex items-center gap-8">
-          <a
-            href="#"
-            class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2"
-            >Tour</a
-          >
-          <a
-            href="#"
-            class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2"
-            >Kuliner</a
-          >
-          <a
-            href="#"
-            class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2"
-            >Event</a
-          >
-          <a
-            href="#"
-            class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2"
-            >Komunitas</a
-          >
-    
-          <!-- Login Button -->
-          <a
-            href="#"
-            class="ml-8 px-4 py-2 bg-[#ffd3ac]/10 rounded-[10px] text-white text-xs font-semibold font-['Plus Jakarta Sans'] leading-[18px]"
-          >
-            Login/Sign Up
-          </a>
-        </div>
-    
-        <!-- Border -->
-        <div
-          class="absolute left-8 right-8 bottom-0 border-t-2 border-white mt-2"
-        ></div>
-      </nav>
-
+        <a
+          href="#"
+          class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2 w-full md:w-auto text-center md:text-left"
+          >Tour</a
+        >
+        <a
+          href="#"
+          class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2 w-full md:w-auto text-center md:text-left"
+          >Kuliner</a
+        >
+        <a
+          href="#"
+          class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2 w-full md:w-auto text-center md:text-left"
+          >Event</a
+        >
+        <a
+          href="#"
+          class="text-white hover:text-secondary hover:text-opacity-50 duration-200 ease-in-out text-sm font-semibold font-sans leading-[21px] px-4 py-2 w-full md:w-auto text-center md:text-left"
+          >Komunitas</a
+        >
+  
+        <!-- Login Button -->
+        <a
+          href="#"
+          class="mt-4 md:mt-0 px-4 py-2 bg-[#ffd3ac]/10 rounded-[10px] text-white text-xs font-semibold font-['Plus Jakarta Sans'] leading-[18px] w-full md:w-auto text-center"
+        >
+          Login/Sign Up
+        </a>
+      </div>
+    </div>
+  
+    <!-- Border -->
+    <div class="absolute left-8 right-8 bottom-0 border-t-2 border-white mt-2"></div>
+  </nav>
+    <!-- Lawang Sewu -->
+    <div class="flex flex-col" data-aos="fade-left">
       <!-- Lawang Sewu -->
-      <div class="flex flex-col">
-        <!-- Lawang Sewu -->
-        <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan1.png'); height: 300px;">
-          <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-          <div class="flex flex-wrap w-full">
-            <!-- Konten Kiri -->
-            <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-              <h3 class="text-4xl font-bold">Lawang Sewu</h3>
-              <h2 class="text-lg font-bold">Kota Semarang</h2>
-              <p class="mt-4 text-sm">
-                Menurut istilah orang Jawa, “lawang” berarti pintu, dan “sewu” bermakna seribu atau menjadi kata yang mewakili angka paling banyak di zaman dahulu. Sehingga “Lawang Sewu” artinya seribu pintu. Namun, kalau dilihat dari jumlah aslinya, Lawang Sewu ini memiliki 928 pintu. Hanya kurang 72 pintu saja bukan untuk benar-benar disebut sewu?
-              </p>
-              <div class="mt-6 flex justify-start md:gap-4 gap-2">
-                <!-- Tombol di bawah teks -->
-                <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                <!-- Tombol di bawah gambar -->
-                <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-              </div>               
+      <div
+        class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center"
+        style="background-image: url('src/img/bangunan1.png'); height: 300px"
+      >
+        <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div class="flex flex-wrap w-full">
+          <!-- Konten Kiri -->
+          <div
+            class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col"
+          >
+            <h3 class="text-4xl font-bold">Lawang Sewu</h3>
+            <h2 class="text-lg font-bold">Kota Semarang</h2>
+            <p class="mt-4 text-sm">
+              Menurut istilah orang Jawa, “lawang” berarti pintu, dan “sewu”
+              bermakna seribu atau menjadi kata yang mewakili angka paling
+              banyak di zaman dahulu. Sehingga “Lawang Sewu” artinya seribu
+              pintu. Namun, kalau dilihat dari jumlah aslinya, Lawang Sewu ini
+              memiliki 928 pintu. Hanya kurang 72 pintu saja bukan untuk
+              benar-benar disebut sewu?
+            </p>
+            <div class="mt-6 flex justify-start md:gap-4 gap-2">
+              <!-- Tombol di bawah teks -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Mulai Quiz
+              </button>
+              <!-- Tombol di bawah gambar -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+              >
+                Tonton Video
+              </button>
             </div>
-            <!-- Gambar Kanan -->
-            <div class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex">         
-              <div class="flex-col">
-                <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Lawang Sewu">
-                <div class="mt-6 flex justify-center">
-                  <!-- Tombol di bawah gambar (hanya di desktop) -->
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                </div> 
+          </div>
+          <!-- Gambar Kanan -->
+          <div
+            class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex z-10"
+          >
+            <div class="flex-col">
+              <img
+                src=""
+                class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+                alt="Lawang Sewu"
+              />
+              <div class="mt-6 flex justify-center">
+                <!-- Tombol di bawah gambar (hanya di desktop) -->
+                <button
+                  class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+                >
+                  Tonton Video
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-        <!-- Hotel Yamato-->
-        <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan2.png'); height: 300px;">
-            <!-- Overlay untuk background -->
-            <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-            <div class="flex flex-wrap w-full">
-              <!-- Gambar di kanan (hanya untuk desktop) -->
-              <div class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6">         
-                <div class="flex-col">
-                  <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Lawang Sewu">
-                  <div class="mt-6 flex justify-center">
-                    <!-- Tombol di bawah gambar (desktop) -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                  </div> 
-                </div>
-              </div>
-          
-              <!-- Konten di kanan -->
-              <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                <h3 class="text-4xl font-bold md:text-right">Hotel Yamato</h3>
-                <h2 class="text-lg font-bold md:text-right">Kota Surabaya</h2>  
-                <p class="mt-4 text-sm sm:text-right">
-                    Insiden Hotel Yamato terjadi pada 19 September 1945 di Surabaya, saat Belanda dengan provokatif menaikkan bendera triwarna di Hotel Yamato (sekarang Hotel Majapahit), menunjukkan penolakan mereka terhadap kemerdekaan Indonesia. Peristiwa ini memicu amarah arek-arek Suroboyo, yang menganggap tindakan tersebut sebagai penghinaan terhadap proklamasi kemerdekaan Indonesia.
-                </p>
-                <!-- Tombol di bawah teks -->
-                <div class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4">
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                  <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                </div>               
-              </div>
+    <!-- Hotel Yamato-->
+    <div
+      class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center "data-aos="fade-right"
+      style="background-image: url('src/img/bangunan2.png'); height: 300px"
+    >
+      <!-- Overlay untuk background -->
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="flex flex-wrap w-full">
+        <!-- Gambar di kanan (hanya untuk desktop) -->
+        <div
+          class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6 z-10"
+        >
+          <div class="flex-col">
+            <img
+              src=""
+              class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+              alt="Lawang Sewu"
+            />
+            <div class="mt-6 flex justify-center">
+              <!-- Tombol di bawah gambar (desktop) -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Tonton Video
+              </button>
             </div>
           </div>
-          
-          <!-- Taman Proklamasi -->
-          <div class="flex flex-col">
-            <!-- Taman Proklamasi -->
-            <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan3.png'); height: 300px;">
-              <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-              <div class="flex flex-wrap w-full">
-                <!-- Konten Kiri -->
-                <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                  <h3 class="text-4xl font-bold">Taman Proklamasi</h3>
-                  <h2 class="text-lg font-bold">Kota Jakarta</h2>
-                  <p class="mt-4 text-sm">
-                    Tugu Proklamasi, yang dibangun pada 17 Agustus 1946, merupakan monumen yang dibuat untuk memperingati satu tahun kemerdekaan Republik Indonesia. Tugu ini dirancang oleh Johanna Masdani, seorang aktivis perempuan yang terlibat dalam berbagai gerakan nasionalis.
-                  </p>
-                  <div class="mt-6 flex justify-start md:gap-4 gap-2">
-                    <!-- Tombol di bawah teks -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                    <!-- Tombol di bawah gambar -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                  </div>               
-                </div>
-                <!-- Gambar Kanan -->
-                <div class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex">         
-                  <div class="flex-col">
-                    <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Taman Proklamasi">
-                    <div class="mt-6 flex justify-center">
-                      <!-- Tombol di bawah gambar (hanya di desktop) -->
-                      <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                    </div> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-   
-         <!-- Jalan Afrika Bandung-->
-         <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan4.png'); height: 300px;">
-            <!-- Overlay untuk background -->
-            <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-            <div class="flex flex-wrap w-full">
-              <!-- Gambar di kanan (hanya untuk desktop) -->
-              <div class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6">         
-                <div class="flex-col">
-                  <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Lawang Sewu">
-                  <div class="mt-6 flex justify-center">
-                    <!-- Tombol di bawah gambar (desktop) -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                  </div> 
-                </div>
-              </div>
-          
-              <!-- Konten di kanan -->
-              <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                <h3 class="text-4xl font-bold md:text-right">Jalan Asia Afrika </h3>
-                <h2 class="text-lg font-bold md:text-right">Bandung</h2>  
-                <p class="mt-4 text-sm sm:text-right">
-                    Peringatan Hari Konferensi Asia-Afrika (KAA) diperingati setiap 18 April, mengenang pertemuan penting yang diadakan di Bandung pada 1955. Konferensi ini mempertemukan 29 negara Asia dan Afrika dengan tujuan membahas kerja sama di bidang ekonomi, budaya, dan sosial serta memperjuangkan kemerdekaan bangsa-bangsa yang masih terjajah.   
-                </p>
-                <!-- Tombol di bawah teks -->
-                <div class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4">
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                  <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                </div>               
-              </div>
-            </div>
-          </div>
+        </div>
 
-           <!-- Makassar -->
-           <div class="flex flex-col">
-            <!-- Taman Proklamasi -->
-            <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan5.png'); height: 300px;">
-              <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-              <div class="flex flex-wrap w-full">
-                <!-- Konten Kiri -->
-                <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                  <h3 class="text-4xl font-bold">Benteng Fort Rotterdam</h3>
-                  <h2 class="text-lg font-bold">Kota Makassar</h2>
-                  <p class="mt-4 text-sm">
-                    Fort Rotterdam, yang dibangun pada abad ke-17 oleh Kerajaan Gowa-Tallo, berfungsi sebagai benteng pertahanan terhadap Belanda. Benteng ini memiliki struktur yang unik, mencerminkan filosofi kerajaan yang menguasai darat dan laut. Selama sejarahnya, Fort Rotterdam telah digunakan sebagai markas militer, tempat penahanan, dan pusat pemerintahan.
-                  </p>
-                  <div class="mt-6 flex justify-start md:gap-4 gap-2">
-                    <!-- Tombol di bawah teks -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                    <!-- Tombol di bawah gambar -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                  </div>               
-                </div>
-                <!-- Gambar Kanan -->
-                <div class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex">         
-                  <div class="flex-col">
-                    <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Taman Proklamasi">
-                    <div class="mt-6 flex justify-center">
-                      <!-- Tombol di bawah gambar (hanya di desktop) -->
-                      <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                    </div> 
-                  </div>
-                </div>
+        <!-- Konten di kanan -->
+        <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
+          <h3 class="text-4xl font-bold md:text-right">Hotel Yamato</h3>
+          <h2 class="text-lg font-bold md:text-right">Kota Surabaya</h2>
+          <p class="mt-4 text-sm sm:text-right">
+            Insiden Hotel Yamato terjadi pada 19 September 1945 di Surabaya,
+            saat Belanda dengan provokatif menaikkan bendera triwarna di Hotel
+            Yamato (sekarang Hotel Majapahit), menunjukkan penolakan mereka
+            terhadap kemerdekaan Indonesia. Peristiwa ini memicu amarah
+            arek-arek Suroboyo, yang menganggap tindakan tersebut sebagai
+            penghinaan terhadap proklamasi kemerdekaan Indonesia.
+          </p>
+          <!-- Tombol di bawah teks -->
+          <div
+            class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4"
+          >
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+            >
+              Mulai Quiz
+            </button>
+            <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+            >
+              Tonton Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taman Proklamasi -->
+    <div class="flex flex-col" data-aos="fade-left">
+      <!-- Taman Proklamasi -->
+      <div
+        class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center"
+        style="background-image: url('src/img/bangunan3.png'); height: 300px"
+      >
+        <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div class="flex flex-wrap w-full">
+          <!-- Konten Kiri -->
+          <div
+            class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col"
+          >
+            <h3 class="text-4xl font-bold">Taman Proklamasi</h3>
+            <h2 class="text-lg font-bold">Kota Jakarta</h2>
+            <p class="mt-4 text-sm">
+              Tugu Proklamasi, yang dibangun pada 17 Agustus 1946, merupakan
+              monumen yang dibuat untuk memperingati satu tahun kemerdekaan
+              Republik Indonesia. Tugu ini dirancang oleh Johanna Masdani,
+              seorang aktivis perempuan yang terlibat dalam berbagai gerakan
+              nasionalis.
+            </p>
+            <div class="mt-6 flex justify-start md:gap-4 gap-2">
+              <!-- Tombol di bawah teks -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Mulai Quiz
+              </button>
+              <!-- Tombol di bawah gambar -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+          <!-- Gambar Kanan -->
+          <div
+            class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex z-10"
+          >
+            <div class="flex-col">
+              <img
+                src=""
+                class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+                alt="Taman Proklamasi"
+              />
+              <div class="mt-6 flex justify-center">
+                <!-- Tombol di bawah gambar (hanya di desktop) -->
+                <button
+                  class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+                >
+                  Tonton Video
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Benteng -->
-          <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan6.png'); height: 300px;">
-            <!-- Overlay untuk background -->
-            <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-            <div class="flex flex-wrap w-full">
-              <!-- Gambar di kanan (hanya untuk desktop) -->
-              <div class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6">         
-                <div class="flex-col">
-                  <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Lawang Sewu">
-                  <div class="mt-6 flex justify-center">
-                    <!-- Tombol di bawah gambar (desktop) -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                  </div> 
-                </div>
-              </div>
-          
-              <!-- Konten di kanan -->
-              <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                <h3 class="text-4xl font-bold md:text-right">Benteng Kuto Besak</h3>
-                <h2 class="text-lg font-bold md:text-right">Palembang</h2>  
-                <p class="mt-4 text-sm sm:text-right">
-                  Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis mollis purus dolor semper. Ultrices purus lorem netus nibh orci tempor. Semper viverra metus arcu lorem enim massa purus congue a. Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
-                </p>
-                <!-- Tombol di bawah teks -->
-                <div class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4">
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                  <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                </div>               
+    <!-- Jalan Afrika Bandung-->
+    <div
+      class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" data-aos="fade-right"
+      style="background-image: url('src/img/bangunan4.png'); height: 300px"
+    >
+      <!-- Overlay untuk background -->
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="flex flex-wrap w-full">
+        <!-- Gambar di kanan (hanya untuk desktop) -->
+        <div
+          class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6 z-10"
+        >
+          <div class="flex-col">
+            <img
+              src=""
+              class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+              alt="Lawang Sewu"
+            />
+            <div class="mt-6 flex justify-center">
+              <!-- Tombol di bawah gambar (desktop) -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Konten di kanan -->
+        <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
+          <h3 class="text-4xl font-bold md:text-right">Jalan Asia Afrika</h3>
+          <h2 class="text-lg font-bold md:text-right">Bandung</h2>
+          <p class="mt-4 text-sm sm:text-right">
+            Peringatan Hari Konferensi Asia-Afrika (KAA) diperingati setiap 18
+            April, mengenang pertemuan penting yang diadakan di Bandung pada
+            1955. Konferensi ini mempertemukan 29 negara Asia dan Afrika dengan
+            tujuan membahas kerja sama di bidang ekonomi, budaya, dan sosial
+            serta memperjuangkan kemerdekaan bangsa-bangsa yang masih terjajah.
+          </p>
+          <!-- Tombol di bawah teks -->
+          <div
+            class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4"
+          >
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+            >
+              Mulai Quiz
+            </button>
+            <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+            >
+              Tonton Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Makassar -->
+    <div class="flex flex-col" data-aos="fade-left">
+      <!-- Taman Proklamasi -->
+      <div
+        class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center"
+        style="background-image: url('src/img/bangunan5.png'); height: 300px"
+      >
+        <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div class="flex flex-wrap w-full">
+          <!-- Konten Kiri -->
+          <div
+            class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col"
+          >
+            <h3 class="text-4xl font-bold">Benteng Fort Rotterdam</h3>
+            <h2 class="text-lg font-bold">Kota Makassar</h2>
+            <p class="mt-4 text-sm">
+              Fort Rotterdam, yang dibangun pada abad ke-17 oleh Kerajaan
+              Gowa-Tallo, berfungsi sebagai benteng pertahanan terhadap Belanda.
+              Benteng ini memiliki struktur yang unik, mencerminkan filosofi
+              kerajaan yang menguasai darat dan laut. Selama sejarahnya, Fort
+              Rotterdam telah digunakan sebagai markas militer, tempat
+              penahanan, dan pusat pemerintahan.
+            </p>
+            <div class="mt-6 flex justify-start md:gap-4 gap-2">
+              <!-- Tombol di bawah teks -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Mulai Quiz
+              </button>
+              <!-- Tombol di bawah gambar -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+          <!-- Gambar Kanan -->
+          <div
+            class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex z-10"
+          >
+            <div class="flex-col">
+              <img
+                src=""
+                class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+                alt="Taman Proklamasi"
+              />
+              <div class="mt-6 flex justify-center">
+                <!-- Tombol di bawah gambar (hanya di desktop) -->
+                <button
+                  class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+                >
+                  Tonton Video
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Pura -->
-          <div class="flex flex-col">
-            <!-- Taman Proklamasi -->
-            <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan7.png'); height: 300px;">
-              <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-              <div class="flex flex-wrap w-full">
-                <!-- Konten Kiri -->
-                <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                  <h3 class="text-4xl font-bold">Pura Goa Gajah</h3>
-                  <h2 class="text-lg font-bold">Bali</h2>
-                  <p class="mt-4 text-sm">
-                      Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis mollis purus dolor semper. Ultrices purus lorem netus nibh orci tempor. Semper viverra metus arcu lorem enim massa purus congue a. Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
-                  </p>
-                  <div class="mt-6 flex justify-start md:gap-4 gap-2">
-                    <!-- Tombol di bawah teks -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                    <!-- Tombol di bawah gambar -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                  </div>               
-                </div>
-                <!-- Gambar Kanan -->
-                <div class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex">         
-                  <div class="flex-col">
-                    <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Taman Proklamasi">
-                    <div class="mt-6 flex justify-center">
-                      <!-- Tombol di bawah gambar (hanya di desktop) -->
-                      <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                    </div> 
-                  </div>
-                </div>
+    <!-- Benteng -->
+    <div
+      class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" data-aos="fade-right"
+      style="background-image: url('src/img/bangunan6.png'); height: 300px"
+    >
+      <!-- Overlay untuk background -->
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="flex flex-wrap w-full">
+        <!-- Gambar di kanan (hanya untuk desktop) -->
+        <div
+          class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6 z-10"
+        >
+          <div class="flex-col">
+            <img
+              src=""
+              class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+              alt="Lawang Sewu "
+            />
+            <div class="mt-6 flex justify-center">
+              <!-- Tombol di bawah gambar (desktop) -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Konten di kanan -->
+        <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
+          <h3 class="text-4xl font-bold md:text-right">Benteng Kuto Besak</h3>
+          <h2 class="text-lg font-bold md:text-right">Palembang</h2>
+          <p class="mt-4 text-sm sm:text-right">
+            Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis
+            mollis purus dolor semper. Ultrices purus lorem netus nibh orci
+            tempor. Semper viverra metus arcu lorem enim massa purus congue a.
+            Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
+          </p>
+          <!-- Tombol di bawah teks -->
+          <div
+            class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4"
+          >
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+            >
+              Mulai Quiz
+            </button>
+            <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+            >
+              Tonton Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pura -->
+    <div class="flex flex-col" data-aos="fade-left">
+      <!-- Taman Proklamasi -->
+      <div
+        class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center"
+        style="background-image: url('src/img/bangunan5.png'); height: 300px"
+      >
+        <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div class="flex flex-wrap w-full">
+          <!-- Konten Kiri -->
+          <div
+            class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col"
+          >
+            <h3 class="text-4xl font-bold">Benteng Fort Rotterdam</h3>
+            <h2 class="text-lg font-bold">Kota Makassar</h2>
+            <p class="mt-4 text-sm">
+              Fort Rotterdam, yang dibangun pada abad ke-17 oleh Kerajaan
+              Gowa-Tallo, berfungsi sebagai benteng pertahanan terhadap Belanda.
+              Benteng ini memiliki struktur yang unik, mencerminkan filosofi
+              kerajaan yang menguasai darat dan laut. Selama sejarahnya, Fort
+              Rotterdam telah digunakan sebagai markas militer, tempat
+              penahanan, dan pusat pemerintahan.
+            </p>
+            <div class="mt-6 flex justify-start md:gap-4 gap-2">
+              <!-- Tombol di bawah teks -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Mulai Quiz
+              </button>
+              <!-- Tombol di bawah gambar -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+          <!-- Gambar Kanan -->
+          <div
+            class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex z-10"
+          >
+            <div class="flex-col">
+              <img
+                src=""
+                class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+                alt="Taman Proklamasi"
+              />
+              <div class="mt-6 flex justify-center">
+                <!-- Tombol di bawah gambar (hanya di desktop) -->
+                <button
+                  class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+                >
+                  Tonton Video
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Tjong Yong Hian Gallery -->
-          <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan9.png'); height: 300px;">
-            <!-- Overlay untuk background -->
-            <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-            <div class="flex flex-wrap w-full">
-              <!-- Gambar di kanan (hanya untuk desktop) -->
-              <div class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6">         
-                <div class="flex-col">
-                  <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Lawang Sewu">
-                  <div class="mt-6 flex justify-center">
-                    <!-- Tombol di bawah gambar (desktop) -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                  </div> 
-                </div>
-              </div>
-          
-              <!-- Konten di kanan -->
-              <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                <h3 class="text-4xl font-bold md:text-right">Tjong Yong Hian Gallery</h3>
-                <h2 class="text-lg font-bold md:text-right">Medan</h2>  
-                <p class="mt-4 text-sm sm:text-right">
-                  Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis mollis purus dolor semper. Ultrices purus lorem netus nibh orci tempor. Semper viverra metus arcu lorem enim massa purus congue a. Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
-                </p>
-                <!-- Tombol di bawah teks -->
-                <div class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4">
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                  <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
-                  <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                </div>               
+    <!-- Tjong Yong Hian Gallery -->
+    <div
+    class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center"
+    style="background-image: url('src/img/bangunan9.png'); width: 100%;" 
+    >
+      <!-- Overlay untuk background -->
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="flex flex-wrap w-full z-10">
+        <!-- Gambar di kanan (hanya untuk desktop) -->
+        <div
+          class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6"
+        >
+          <div class="flex-col">
+            <img
+              src=""
+              class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+              alt="Lawang Sewu"
+            />
+            <div class="mt-6 flex justify-center">
+              <!-- Tombol di bawah gambar (desktop) -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Konten di kanan -->
+        <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
+          <h3 class="text-4xl font-bold md:text-right">
+            Tjong Yong Hian Gallery
+          </h3>
+          <h2 class="text-lg font-bold md:text-right">Medan</h2>
+          <p class="mt-4 text-sm sm:text-right">
+            Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis
+            mollis purus dolor semper. Ultrices purus lorem netus nibh orci
+            tempor. Semper viverra metus arcu lorem enim massa purus congue a.
+            Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
+          </p>
+          <!-- Tombol di bawah teks -->
+          <div
+            class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4"
+          >
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+            >
+              Mulai Quiz
+            </button>
+            <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+            >
+              Tonton Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pulau Kembang-->
+    <div class="flex flex-col" data-aos="fade-left">
+      <div
+        class="relative flex flex-wrap md:flex-nowrap h-[300px] w-full"
+        style="background-image: url('src/img/bangunan10.png');" 
+      >
+        <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div class="flex flex-wrap w-full z-10">
+          <!-- Konten Kiri -->
+          <div
+            class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col"
+          >
+            <h3 class="text-4xl font-bold">Pulau Kembang</h3>
+            <h2 class="text-lg font-bold">Banjarmasin</h2>
+            <p class="mt-4 text-sm">
+              Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis
+              mollis purus dolor semper. Ultrices purus lorem netus nibh orci
+              tempor. Semper viverra metus arcu lorem enim massa purus congue a.
+              Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
+            </p>
+            <div class="mt-6 flex justify-start md:gap-4 gap-2">
+              <!-- Tombol di bawah teks -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Mulai Quiz
+              </button>
+              <!-- Tombol di bawah gambar -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+              >
+                Tonton Video
+              </button>
+            </div>
+          </div>
+          <!-- Gambar Kanan -->
+          <div
+            class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex"
+          >
+            <div class="flex-col">
+              <img
+                src=""
+                class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+                alt="Taman Proklamasi"
+              />
+              <div class="mt-6 flex justify-center">
+                <!-- Tombol di bawah gambar (hanya di desktop) -->
+                <button
+                  class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+                >
+                  Tonton Video
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-           <!-- Pulau Kembang-->
-           <div class="flex flex-col">
-            <!-- Taman Proklamasi -->
-            <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan10.png'); height: 300px;">
-              <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-              <div class="flex flex-wrap w-full">
-                <!-- Konten Kiri -->
-                <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                  <h3 class="text-4xl font-bold">Pulau Kembang</h3>
-                  <h2 class="text-lg font-bold">Banjarmasin</h2>
-                  <p class="mt-4 text-sm">
-                      Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis mollis purus dolor semper. Ultrices purus lorem netus nibh orci tempor. Semper viverra metus arcu lorem enim massa purus congue a. Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
-                  </p>
-                  <div class="mt-6 flex justify-start md:gap-4 gap-2">
-                    <!-- Tombol di bawah teks -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                    <!-- Tombol di bawah gambar -->
-                    <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                  </div>               
-                </div>
-                <!-- Gambar Kanan -->
-                <div class="flex md:w-1/2 w-full justify-center md:justify-end p-6 sm:hidden md:flex">         
-                  <div class="flex-col">
-                    <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Taman Proklamasi">
-                    <div class="mt-6 flex justify-center">
-                      <!-- Tombol di bawah gambar (hanya di desktop) -->
-                      <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                    </div> 
-                  </div>
-                </div>
-              </div>
+    <!-- Monumen Perang Dunia Ke 2 -->
+    <div
+      class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" data-aos="fade-right"
+      style="background-image: url('src/img/bangunan11.png'); height: 300px"
+    >
+      <!-- Overlay untuk background -->
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="flex flex-wrap w-full z-10">
+        <!-- Gambar di kanan (hanya untuk desktop) -->
+        <div
+          class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6"
+        >
+          <div class="flex-col">
+            <img
+              src=""
+              class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm"
+              alt="Lawang Sewu"
+            />
+            <div class="mt-6 flex justify-center">
+              <!-- Tombol di bawah gambar (desktop) -->
+              <button
+                class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+              >
+                Tonton Video
+              </button>
             </div>
           </div>
+        </div>
 
-            <!-- Monumen Perang Dunia Ke 2 -->
-            <div class="relative flex flex-wrap md:flex-nowrap h-[300px] bg-cover bg-center" style="background-image: url('src/img/bangunan11.png'); height: 300px;">
-                <!-- Overlay untuk background -->
-                <div class="absolute inset-0 bg-primary bg-opacity-70"></div> 
-                <div class="flex flex-wrap w-full">
-                  <!-- Gambar di kanan (hanya untuk desktop) -->
-                  <div class="hidden md:flex md:w-1/2 justify-center md:justify-start p-6">         
-                    <div class="flex-col">
-                      <img src="" class="w-80 h-40 bg-white/10 rounded-[18px] backdrop-blur-sm" alt="Lawang Sewu">
-                      <div class="mt-6 flex justify-center">
-                        <!-- Tombol di bawah gambar (desktop) -->
-                        <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Tonton Video</button>
-                      </div> 
-                    </div>
-                  </div>
-              
-                  <!-- Konten di kanan -->
-                  <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
-                    <h3 class="text-4xl font-bold md:text-right">T Monumen Perang Dunia Ke 2</h3>
-                    <h2 class="text-lg font-bold md:text-right">Manado</h2>  
-                    <p class="mt-4 text-sm sm:text-right">
-                      Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis mollis purus dolor semper. Ultrices purus lorem netus nibh orci tempor. Semper viverra metus arcu lorem enim massa purus congue a. Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
-                    </p>
-                    <!-- Tombol di bawah teks -->
-                    <div class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4">
-                      <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl">Mulai Quiz</button>
-                      <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
-                      <button class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden">Tonton Video</button>
-                    </div>               
-                  </div>
-                </div>
-              </div>
-</body>
+        <!-- Konten di kanan -->
+        <div class="relative z-10 text-white p-6 md:w-1/2 w-full flex flex-col">
+          <h3 class="text-4xl font-bold md:text-right">
+            T Monumen Perang Dunia Ke 2
+          </h3>
+          <h2 class="text-lg font-bold md:text-right">Manado</h2>
+          <p class="mt-4 text-sm sm:text-right">
+            Lorem ipsum dolor sit amet consectetur. Non massa non nunc felis
+            mollis purus dolor semper. Ultrices purus lorem netus nibh orci
+            tempor. Semper viverra metus arcu lorem enim massa purus congue a.
+            Neque faucibus lacus nunc tempus adipiscing tortor vitae at.
+          </p>
+          <!-- Tombol di bawah teks -->
+          <div
+            class="mt-6 flex flex-wrap justify-start md:justify-end gap-2 md:gap-4"
+          >
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl"
+            >
+              Mulai Quiz
+            </button>
+            <!-- Tombol "Tonton Video" muncul di HP dan sejajar -->
+            <button
+              class="bg-[#8B5E3C] hover:bg-[#A67B5B] text-white px-4 py-2 rounded-xl md:hidden"
+            >
+              Tonton Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,   // Durasi animasi (default: 400ms)
+        delay: 200,       // Waktu tunda global    // Animasi hanya berjalan satu kali
+      });
+      const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInsideMenu = menu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideMenu && !isClickOnToggle && window.innerWidth < 768) {
+      menu.classList.remove('flex');
+      menu.classList.add('hidden');
+    }
+  });
+
+  // Ensure menu is hidden on larger screens
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      menu.classList.remove('hidden');
+      menu.classList.add('flex');
+    } else {
+      menu.classList.remove('flex');
+      menu.classList.add('hidden');
+    }
+  });
+
+    </script>
+  </body>
 </html>

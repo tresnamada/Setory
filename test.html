@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AOS Example</title>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-  <div data-aos="fade-up">
-    <h1>Judul yang Fade In</h1>
-    <p>Ini adalah konten yang muncul dengan animasi fade-up saat di-scroll.</p>
-  </div>
+<body class="bg-primary">
+    <iframe
+    src="https://www.google.com/maps/d/u/0/edit?mid=1S1jTIqlHq5dlI0BwLhYxfLg91pS79AXP&usp=sharing"
+    class="w-96 h-[350px] rounded-lg shadow-lg border border-gray-300"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    style="pointer-events: none"
+  ></iframe>
+  <iframe
+  src="https://www.google.com/maps/d/u/0/embed?mid=1jO2-Lq7rsFfPneVm2UlrE6Gf1WcVkl0g"
+  width="640" height="480"
+  style="border:0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
+  allowfullscreen=""
+  loading="lazy">
+</iframe>
 
-  <div data-aos="zoom-in" data-aos-duration="1500">
-    <h1>Judul yang Zoom In</h1>
-    <p>Ini adalah konten yang muncul dengan animasi zoom-in saat di-scroll.</p>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,  // Durasi animasi dalam milidetik
-      easing: 'ease-in-out',  // Jenis easing
-      once: true  // Animasi hanya terjadi sekali
-    });
-  </script>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    if (navLinks.classList.contains("hidden")) {
+      navLinks.classList.remove("hidden");
+      navLinks.style.maxHeight = navLinks.scrollHeight + "px";
+    } else {
+      navLinks.style.maxHeight = "0px";
+      setTimeout(() => {
+        navLinks.classList.add("hidden");
+      }, 300);
+    }
+  });
+</script>
+
+<style>
+  /* Add responsive styles */
+  @media (max-width: 768px) {
+    #nav-links {
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
+      padding: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+    }
+    #nav-links a {
+      width: 100%;
+      text-align: left;
+      padding: 10px 20px;
+      transition: color 0.3s ease-in-out, transform 0.2s;
+    }
+    #nav-links a:hover {
+      color: #ffd3ac;
+      transform: translateX(5px);
+    }
+  }
+</style>
+
+      
+      
 </body>
 </html>

@@ -7,71 +7,163 @@
   <link rel="stylesheet" href="src/output.css">
 </head>
 <body class="bg-primary text-white min-h-screen font-sans">
-    <nav class="w-full h-20 mx-auto relative flex items-center justify-between px-8">
-        <!-- Logo -->
-        <div class="text-white text-lg font-bold leading-[27px]">
-          LOGO
-        </div>
-    
-        <!-- Navbar Links -->
-        <div class="flex items-center gap-8">
-          <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Home</a>
-          <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Tour</a>
-          <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Kuliner</a>
-          <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Event</a>
-          <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Komunitas</a>
-    
-          <!-- Login Button -->
-          <a href="#" class="ml-8 px-4 py-2 bg-[#ffd3ac]/10 rounded-[10px] text-white text-xs font-semibold">
-            Login/Sign Up
-          </a>
-        </div>
-    
-        <!-- Border -->
-        <div class="absolute left-8 right-8 bottom-0 border-t-2 border-white mt-2"></div>
-      </nav>
-    
-      <div class="max-w-3xl mx-auto p-6">
-        <!-- Header -->
-        <div class="text-center bg-[#1E1007CC] py-4 rounded-lg shadow-md">
-          <h1 class="text-lg font-semibold">Komunitas Anda</h1>
-        </div>
-    
-        <!-- Chat Container -->
-        <div id="chat-container" class="bg-primary mx-auto mt-10 p-4 rounded-lg shadow-lg h-[70vh] overflow-y-auto">
-          <!-- Contoh Pesan Orang Lain -->
-          <div class="flex space-x-4 mb-4">
-            <img src="https://via.placeholder.com/50" alt="Erlangga" class="w-12 h-12 rounded-full" />
-            <div class="bg-brown-700 p-4 rounded-lg shadow max-w-[75%] break-words">
-              <h2 class="font-semibold">Erlangga</h2>
-              <p>
-                Ini adalah pesan contoh yang dikirim oleh Erlangga.
-              </p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="flex items-center bg-[#1E1007CC] rounded-full p-8 shadow-lg w-full mx-auto">
-            <!-- Input Field -->
-            <textarea
-              id="message-input"
-              rows="1"
-              class="flex-grow bg-transparent text-white placeholder-white focus:outline-none px-4"
-              placeholder="Tulis Pesan Disini"
-            ></textarea>
-            <!-- Send Button -->
-            <button
-              id="send-button"
-              class="bg-[#c59976] text-white w-10 h-10 rounded-full flex items-center justify-center ml-2 hover:bg-[#af8365] transition"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-6.518-4.824a1 1 0 00-1.492.846v9.656a1 1 0 001.492.846l6.518-4.824a1 1 0 000-1.692z" />
-              </svg>
-            </button>
-          </div>
-      </div>
-    
+  <nav class="w-full h-20 mx-auto relative flex items-center justify-between px-8">
+    <!-- Logo -->
+    <div class="text-white text-lg font-bold leading-[27px]">
+      LOGO
+    </div>
 
-  <script src="src/js/komunitas.js"></script>
+    <!-- Navbar Links -->
+    <div class="flex items-center gap-8">
+      <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Home</a>
+      <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Tour</a>
+      <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Kuliner</a>
+      <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Event</a>
+      <a href="#" class="text-white hover:text-secondary text-sm font-semibold leading-[21px]">Komunitas</a>
+
+      <!-- Login Button -->
+      <a href="#" class="ml-8 px-4 py-2 bg-[#ffd3ac]/10 rounded-[10px] text-white text-xs font-semibold">
+        Login/Sign Up
+      </a>
+    </div>
+
+    <!-- Border -->
+    <div class="absolute left-8 right-8 bottom-0 border-t-2 border-white mt-2"></div>
+  </nav>
+
+  <div class="max-w-3xl mx-auto p-6">
+    <!-- Header -->
+    <div class="text-center bg-[#1E1007CC] py-4 rounded-lg shadow-md">
+      <h1 class="text-lg font-semibold">Komunitas Anda</h1>
+    </div>
+
+    <!-- Chat Container -->
+    <div id="chat-container" class="bg-primary mx-auto mt-10 p-4 rounded-lg shadow-lg h-[70vh] overflow-y-auto">
+      <!-- Contoh Pesan Orang Lain -->
+      <div class="flex space-x-4 mb-4 message" data-message-id="1">
+        <img src="https://via.placeholder.com/50" alt="Erlangga" class="w-12 h-12 rounded-full" />
+        <div class="bg-brown-700 p-4 rounded-lg shadow max-w-[75%] break-words">
+          <h2 class="font-semibold">Erlangga</h2>
+          <p>
+            Ini adalah pesan contoh yang dikirim oleh Erlangga.
+          </p>
+          <button class="text-sm text-secondary mt-2 reply-button">Reply</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reply Section -->
+    <div class="flex items-center bg-[#1E1007CC] rounded-full p-8 shadow-lg w-full mx-auto relative">
+      <!-- Input Field -->
+      <textarea
+        id="message-input"
+        rows="1"
+        class="flex-grow bg-transparent text-white placeholder-white focus:outline-none px-4"
+        placeholder="Tulis Pesan Disini"
+      ></textarea>
+
+      <!-- Send Button -->
+      <button
+        id="send-button"
+        class="bg-[#c59976] text-white w-10 h-10 rounded-full flex items-center justify-center ml-2 hover:bg-[#af8365] transition"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-6.518-4.824a1 1 0 00-1.492.846v9.656a1 1 0 001.492.846l6.518-4.824a1 1 0 000-1.692z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cancel Reply Section (ditempatkan di bawah chat, di luar form input) -->
+    <div id="cancel-reply" class="hidden w-full mt-4 flex justify-between">
+      <span class="text-sm text-red-500">
+        Replying to: <span id="replying-to-name"></span>
+      </span>
+      <button id="cancel-reply-button" class="px-4 py-2 bg-[#c59976] text-white rounded-full text-sm">
+        Cancel Reply
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let replyToMessageId = null;
+    let replyingTo = null;
+
+    // Fungsi untuk menandai pesan yang akan dibalas
+    const replyButtons = document.querySelectorAll('.reply-button');
+    replyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const messageElement = this.closest('.message');
+        const messageId = messageElement.getAttribute('data-message-id');
+        const senderName = messageElement.querySelector('h2').innerText;
+
+        replyToMessageId = messageId;
+        replyingTo = senderName;
+
+        // Tampilkan bagian cancel reply
+        document.getElementById('cancel-reply').classList.remove('hidden');
+        document.getElementById('replying-to-name').innerText = senderName;
+      });
+    });
+
+    // Fungsi untuk mengirim pesan saat menekan Enter atau klik tombol Send
+    const sendButton = document.getElementById('send-button');
+    const messageInput = document.getElementById('message-input');
+
+    // Mengirim pesan saat tombol Send diklik
+    sendButton.addEventListener('click', sendMessage);
+
+    // Mengirim pesan saat Enter ditekan (kecuali Shift + Enter)
+    messageInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault(); // Mencegah Enter membuat baris baru
+        sendMessage();
+      }
+    });
+
+    function sendMessage() {
+      const messageText = messageInput.value.trim();
+      if (messageText) {
+        const newMessage = document.createElement('div');
+        newMessage.classList.add('flex', 'space-x-4', 'mb-4', 'justify-end'); // Menambahkan kelas untuk memposisikan pesan di kanan
+
+        // Pesan yang dibalas
+        if (replyToMessageId) {
+          newMessage.innerHTML = `
+            <div class="bg-brown-700 p-4 rounded-lg shadow max-w-[75%] break-words">
+              <h2 class="font-semibold">Anda (Replying to ${replyingTo})</h2>
+              <p>${messageText}</p>
+            </div>
+            <img src="https://via.placeholder.com/50" alt="User" class="w-12 h-12 rounded-full" />
+          `;
+        } else {
+          // Pesan baru tanpa reply
+          newMessage.innerHTML = `
+            <div class="bg-brown-700 p-4 rounded-lg shadow max-w-[75%] break-words">
+              <h2 class="font-semibold text-right">Anda</h2>
+              <p>${messageText}</p>
+            </div>
+            <img src="https://via.placeholder.com/50" alt="User" class="w-12 h-12 rounded-full" />
+          `;
+        }
+
+        // Tambahkan pesan ke chat
+        document.getElementById('chat-container').appendChild(newMessage);
+        messageInput.value = ''; // Reset input field
+
+        // Reset reply
+        replyToMessageId = null;
+        replyingTo = null;
+        document.getElementById('cancel-reply').classList.add('hidden'); // Sembunyikan cancel reply
+      }
+    }
+
+    // Fungsi untuk cancel reply
+    document.getElementById('cancel-reply-button').addEventListener('click', function() {
+      replyToMessageId = null;
+      replyingTo = null;
+      document.getElementById('cancel-reply').classList.add('hidden');
+      document.getElementById('message-input').focus(); // Kembali ke focus input
+    });
+  </script>
 </body>
 </html>
