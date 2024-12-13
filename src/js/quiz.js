@@ -43,3 +43,18 @@ function toggleAnswer(button) {
      // Reset form
      reviewForm.reset();
  });
+ var map = L.map('map').setView([-6.98407491356221, 110.41080280250812], 15); // Initial position
+
+ // Add a tile layer (OpenStreetMap)
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+ }).addTo(map);
+
+ // Add marker 1
+ L.marker([-6.98407491356221, 110.41080280250812]).addTo(map)
+     .bindPopup('Titik 1')
+     .openPopup();
+
+ // Add marker 2
+ L.marker([-6.980, 110.415]).addTo(map)
+     .bindPopup('Titik 2');

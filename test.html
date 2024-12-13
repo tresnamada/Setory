@@ -3,71 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/output.css">
+    <title>Leaflet Map with Two Markers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 1000px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+    </style>
 </head>
-<body class="bg-primary">
-    <iframe
-    src="https://www.google.com/maps/d/u/0/edit?mid=1S1jTIqlHq5dlI0BwLhYxfLg91pS79AXP&usp=sharing"
-    class="w-96 h-[350px] rounded-lg shadow-lg border border-gray-300"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    style="pointer-events: none"
-  ></iframe>
-  <iframe
-  src="https://www.google.com/maps/d/u/0/embed?mid=1jO2-Lq7rsFfPneVm2UlrE6Gf1WcVkl0g"
-  width="640" height="480"
-  style="border:0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
-  allowfullscreen=""
-  loading="lazy">
-</iframe>
+<body>
+    <div id="map"></div>
 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-6.98407491356221, 110.41080280250812], 15); // Initial position
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+        // Add a tile layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-  hamburger.addEventListener("click", () => {
-    if (navLinks.classList.contains("hidden")) {
-      navLinks.classList.remove("hidden");
-      navLinks.style.maxHeight = navLinks.scrollHeight + "px";
-    } else {
-      navLinks.style.maxHeight = "0px";
-      setTimeout(() => {
-        navLinks.classList.add("hidden");
-      }, 300);
-    }
-  });
-</script>
+        // Add marker 1
+        L.marker([-6.98407491356221, 110.41080280250812]).addTo(map)
+            .bindPopup('Titik 1')
+            .openPopup();
 
-<style>
-  /* Add responsive styles */
-  @media (max-width: 768px) {
-    #nav-links {
-      display: flex;
-      flex-direction: column;
-      background-color: transparent;
-      padding: 10px;
-      border-radius: 8px;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.3s ease-in-out;
-    }
-    #nav-links a {
-      width: 100%;
-      text-align: left;
-      padding: 10px 20px;
-      transition: color 0.3s ease-in-out, transform 0.2s;
-    }
-    #nav-links a:hover {
-      color: #ffd3ac;
-      transform: translateX(5px);
-    }
-  }
-</style>
-
-      
-      
+        // Add marker 2
+        L.marker([-6.980, 110.415]).addTo(map)
+            .bindPopup('Titik 2');
+    </script>
 </body>
 </html>
